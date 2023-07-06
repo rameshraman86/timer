@@ -5,11 +5,6 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-
-const ac = new AbortController();
-const signal = ac.signal;
-
-
 rl.question('Set timer for how many seconds? : ', (answer) => {
   if (answer === 'b' || answer === 'B') {
     process.stdout.write('\x07');  //code that beeps
